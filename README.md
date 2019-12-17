@@ -1,77 +1,52 @@
-## userrecon-py
-Recognition usernames in **187** social networks.
+# userrecon-py
+Username recognition on various websites.
 
-<p align="center">
-    <a href="https://youtu.be/UcPIV4CgzY0">
-        <img alt="userrecon-py" src="https://i.imgur.com/V5z7A87.png"/>
-    </a>
-    <p align="center">
-        <a href="https://github.com/decoxviii/userrecon-py/releases/latest"><img alt="Release" src="https://img.shields.io/github/tag/decoxviii/userrecon-py.svg"></a>
-        <a href="https://github.com/decoxviii/userrecon-py/blob/master/LICENSE"><img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg"></a>
-         <a href="https://twitter.com/decoxviii"><img alt="Twitter" src="https://img.shields.io/badge/twitter-@decoxviii-blue.svg"></a>
-    </p>
-</p>
+[![powered by](https://img.shields.io/badge/powered%20by-WhatsMyName-black.svg?style=flat&logo=github)](https://github.com/WebBreacher/WhatsMyName)
+[![demo](https://img.shields.io/badge/asciinema-demo-red.svg?style=flat)](https://asciinema.org/a/272560)
+![websites](https://img.shields.io/badge/websites-193-green.svg?style=flat)
+[![donate](https://img.shields.io/badge/paypal-donate-blue.svg?style=flat&logo=paypal)](https://paypal.me/decoxviii)
 
 ---
 
-#### Installation
+## Installation
 
-1. Install dependencies (Debian/Ubuntu):
-```
-sudo apt install python3 python3-pip
-```
-
-2. Install with `pip3`:
-```
-sudo -H pip3 install git+https://github.com/decoxviii/userrecon-py.git
+#### With `pip3`
+```bash
+# Linux
+sudo -H pip3 install git+https://github.com/decoxviii/userrecon-py.git --upgrade
 userrecon-py --help
 ```
 
----
-
-#### Building from Source
-
-Clone this repository, and:
-```
+#### Build from source
+```bash
+# Linux
 git clone https://github.com/decoxviii/userrecon-py.git ; cd userrecon-py
 sudo -H pip3 install -r requirements.txt
 python3 setup.py build
 sudo python3 setup.py install
 ```
-
 ---
 
-#### Update
-
-To update this tool to the latest version, run:
-```
-sudo -H pip3 install git+https://github.com/decoxviii/userrecon-py.git --upgrade
-userrecon-py --version
-```
-
----
-
-#### Usage
+## Usage
 Start by printing the available actions by running `userrecon-py --help`. Then you can perform the following tests:
+```bash
+# print all results.
+userrecon-py target decoxviii --all -o test
 
+
+# print positive results.
+userrecon-py target decoxviii --positive -o test
+
+
+# print negative results.
+userrecon-py target decoxviii --negative  -o test
 ```
-userrecon-py --target decoxviii -o test_one
-```
-
-Watch this demo [video](https://youtu.be/UcPIV4CgzY0)
-
----
-
-#### Thanks
-
-This program is possible thanks to:
-
-+ [userrecon](https://github.com/thelinuxchoice/userrecon)
-+ [WhatsMyName](https://github.com/WebBreacher/WhatsMyName)
 
 ---
 
 **decoxviii**
 
 **[MIT](https://github.com/decoxviii/userrecon-py/blob/master/LICENSE)**
+
+
 
